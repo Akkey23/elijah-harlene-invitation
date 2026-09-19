@@ -109,42 +109,17 @@
       <div class="section-heading">
         <p class="eyebrow">Our Little Memories</p>
         <h2>More places. More moments.</h2>
-        <p>And hopefully, many more chapters together.</p>
+        <p>Tap any photo to see it up close. ♡</p>
       </div>
-
-      <div class="gallery">
-        <figure class="polaroid tilt-left">
-          <img src="assets/us-02.jpg" alt="Elijah and Harlene at the beach">
-          <figcaption>Another day, another memory ♡</figcaption>
-        </figure>
-        <div class="memory-note">
-          <span>♡</span>
-          <h3>Here's to us.</h3>
-          <p>More laughter.<br>More sunsets.<br>More adventures.<br>More ordinary days that become special simply because I’m with you.</p>
-        
-          <figure class="memory-card new-memory">
-            <img src="assets/memory-01.jpg" alt="Elijah and Harlene — memory 1" loading="lazy">
-          </figure>
-          <figure class="memory-card new-memory">
-            <img src="assets/memory-02.jpg" alt="Elijah and Harlene — memory 2" loading="lazy">
-          </figure>
-          <figure class="memory-card new-memory">
-            <img src="assets/memory-03.jpg" alt="Elijah and Harlene — memory 3" loading="lazy">
-          </figure>
-          <figure class="memory-card new-memory">
-            <img src="assets/memory-04.jpg" alt="Elijah and Harlene — memory 4" loading="lazy">
-          </figure>
-          <figure class="memory-card new-memory">
-            <img src="assets/memory-05.jpg" alt="Elijah and Harlene — memory 5" loading="lazy">
-          </figure>
-          <figure class="memory-card new-memory">
-            <img src="assets/memory-06.jpg" alt="Elijah and Harlene — memory 6" loading="lazy">
-          </figure>
-        </div>
-        <figure class="polaroid tilt-right">
-          <img src="assets/us-01.jpg" alt="Elijah and Harlene together">
-          <figcaption>You & me, wherever we go.</figcaption>
-        </figure>
+      <div class="gallery-upgrade" id="memoryGallery">
+        <figure><img src="assets/header-couple.jpg" alt="Elijah and Harlene together" loading="lazy"><figcaption>Us, in one of my favorite moments ♡</figcaption></figure>
+        <figure><img src="assets/memory-01.jpg" alt="A memory together" loading="lazy"><figcaption>Little moments with you.</figcaption></figure>
+        <figure><img src="assets/memory-02.jpg" alt="A memory together" loading="lazy"><figcaption>Another chapter of us.</figcaption></figure>
+        <figure><img src="assets/memory-03.jpg" alt="A playful memory together" loading="lazy"><figcaption>The silly moments count too ♡</figcaption></figure>
+        <figure><img src="assets/memory-04.jpg" alt="A date memory together" loading="lazy"><figcaption>Dates I never want to forget.</figcaption></figure>
+        <figure><img src="assets/memory-05.jpg" alt="A mirror photo together" loading="lazy"><figcaption>You & me, wherever we go.</figcaption></figure>
+        <figure><img src="assets/memory-06.jpg" alt="A beach memory together" loading="lazy"><figcaption>More adventures, more memories.</figcaption></figure>
+        <figure><img src="assets/us-02.jpg" alt="Elijah and Harlene together" loading="lazy"><figcaption>Here's to many more. ♡</figcaption></figure>
       </div>
     </section>
 
@@ -170,6 +145,16 @@
         <p class="tiny-note">October 17–18, 2026 · Tagaytay · 1:00 PM</p>
       </div>
     </section>
+    <section class="section" id="your-message">
+      <div class="reply-card">
+        <p class="eyebrow">A Little Space For You</p>
+        <h2>Now it’s your turn, my love. ♡</h2>
+        <p>If there’s something in your heart you’d like to tell me, this space is yours.</p>
+        <textarea id="loveMessage" maxlength="3000" placeholder="Write something for Elijah…" aria-label="Message for Elijah"></textarea>
+        <button class="send-love" id="sendLove" type="button">Send to Elijah ♡</button>
+        <p class="reply-note">This opens your email app with your message ready to send.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -187,6 +172,16 @@
       <p class="modal-details"><strong>October 17–18, 2026</strong><br>Meet-up at 1:00 PM<br>Semi-Formal</p>
       <p>Let’s make another beautiful memory together.</p>
       <button class="close-main" id="closeMain">I’m excited ♡</button>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">×</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
     </div>
   </div>
 
