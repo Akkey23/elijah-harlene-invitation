@@ -144,7 +144,10 @@
         <p class="eyebrow">For Harlene</p>
         <h2>Will You Join Me?</h2>
         <p class="rsvp-text">I’d be really happy to spend this little getaway with you. ♡</p>
-        <button class="yes-button" id="yesButton">Yes, I’ll go with you! ♡</button>
+        <div class="rsvp-actions" id="rsvpActions">
+          <button class="yes-button" id="yesButton" type="button">Yes, I’ll go with you! ♡</button>
+          <button class="no-button" id="noButton" type="button">No</button>
+        </div>
         <p class="tiny-note">October 17–18, 2026 · Tagaytay · 1:00 PM</p>
       </div>
     </section>
@@ -164,6 +167,15 @@
     <p>Made with love by Elijah for Harlene ♡</p>
     <p class="footer-small">One year is only the beginning.</p>
   </footer>
+
+
+  <div class="reaction-pop" id="reactionPop" aria-hidden="true">
+    <div class="reaction-card" role="dialog" aria-modal="true" aria-label="Elijah's reaction">
+      <button class="reaction-close" id="reactionClose" type="button" aria-label="Close reaction">×</button>
+      <img src="assets/yes-reaction.gif" alt="Elijah's happy reaction">
+      <p>You just made me the happiest. ♡</p>
+    </div>
+  </div>
 
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-box">

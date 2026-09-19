@@ -198,3 +198,81 @@ footer{text-align:center;padding:45px 20px;background:#4c2c37;color:#f8dfe5;font
   background: rgba(255,255,255,.32);
 }
 .lightbox img { max-height: 82vh; object-fit: contain; }
+
+
+/* Interactive RSVP */
+.rsvp-actions{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.no-button{
+  border:1px solid rgba(151,72,96,.28);
+  background:rgba(255,255,255,.82);
+  color:#9b5268;
+  padding:15px 27px;
+  border-radius:999px;
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  letter-spacing:.04em;
+  cursor:pointer;
+  transition:transform .25s ease, opacity .3s ease, background .25s ease;
+}
+.no-button:hover{transform:translateY(-2px);background:#fff;}
+.no-button.fading{opacity:0;transform:scale(.75);pointer-events:none;}
+
+.reaction-pop{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:grid;
+  place-items:center;
+  padding:22px;
+  background:rgba(35,12,23,.72);
+  backdrop-filter:blur(9px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .3s ease, visibility .3s ease;
+}
+.reaction-pop.show{opacity:1;visibility:visible;}
+.reaction-card{
+  position:relative;
+  width:min(560px,94vw);
+  padding:14px 14px 24px;
+  border-radius:28px;
+  background:rgba(255,248,250,.98);
+  box-shadow:0 28px 80px rgba(52,17,32,.35);
+  text-align:center;
+  transform:scale(.86);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1.15);
+}
+.reaction-pop.show .reaction-card{transform:scale(1);}
+.reaction-card img{
+  width:100%;
+  display:block;
+  border-radius:20px;
+}
+.reaction-card p{
+  margin:18px 12px 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  color:#8e465d;
+}
+.reaction-close{
+  position:absolute;
+  top:22px;
+  right:22px;
+  z-index:2;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.9);
+  color:#7f3e53;
+  font-size:25px;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(0,0,0,.15);
+}

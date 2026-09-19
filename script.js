@@ -35,10 +35,38 @@ const yesButton = document.getElementById('yesButton');
 const closeModal = document.getElementById('closeModal');
 const closeMain = document.getElementById('closeMain');
 
+const noButton = document.getElementById('noButton');
+const reactionPop = document.getElementById('reactionPop');
+const reactionClose = document.getElementById('reactionClose');
+let noClicks = 0;
+
+noButton.addEventListener('click', () => {
+  noClicks += 1;
+  if (noClicks === 1) {
+    noButton.textContent = 'Are you sure?';
+  } else if (noClicks === 2) {
+    noButton.textContent = 'Think about it ♡';
+  } else {
+    noButton.classList.add('fading');
+    setTimeout(() => {
+      noButton.hidden = true;
+      yesButton.focus();
+    }, 300);
+  }
+});
+
 yesButton.addEventListener('click', () => {
-  modal.classList.add('show');
+  reactionPop.classList.add('show');
+  reactionPop.setAttribute('aria-hidden','false');
   burstHearts();
 });
+
+function closeReaction(){
+  reactionPop.classList.remove('show');
+  reactionPop.setAttribute('aria-hidden','true');
+}
+reactionClose.addEventListener('click', closeReaction);
+reactionPop.addEventListener('click', e => { if (e.target === reactionPop) closeReaction(); });
 [closeModal, closeMain].forEach(btn => btn.addEventListener('click', () => modal.classList.remove('show')));
 modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('show'); });
 
